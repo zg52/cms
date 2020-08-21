@@ -1,0 +1,127 @@
+@import './variables.less';
+@import "~@/assets/styles/mixin.less";
+
+// 通用卡片面板
+.common_card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  .common_card_title {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    line-height:20px;
+    font-weight:500;
+    color:rgba(73,80,96,1);
+    text-align: left;
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: row;
+
+    .common_title_left {
+      
+    }
+
+    .common_title_right {
+
+    }
+  }
+
+  .common_card_content {
+    position: relative;
+    width: 100%;
+    font-size: 12px;
+    line-height:20px;
+    font-weight:400;
+    color:rgba(73,80,96,1);
+    text-align: left;
+  }
+
+  .common_card_row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .common_card_column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+// 通用表格样式，覆盖element-ui使用
+/deep/
+.common_table_header {
+  box-sizing: border-box;
+  .common_table_header_cell {
+    background-color: rgba(247,248,250,1);
+    padding: 14px 0;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(230,231,235,1);
+    border-bottom: 1px solid rgba(230,231,235,1);
+
+    .cell {
+      font-size:12px;
+      font-weight:bold;
+      color:rgba(73,80,96,1);
+      line-height:20px;
+      padding-left: 16px;
+    }
+  }
+}
+/deep/
+.common_table_row {
+  &:hover {
+    background-color: rgba(241,246,255,1);
+  }
+  .common_table_cell {
+    padding: 14px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(230,231,235,1);
+    
+    .cell {
+      font-size:12px;
+      font-weight:400;
+      color:rgba(73,80,96,1);
+      line-height:20px;
+      padding-left: 16px;
+    }
+  }
+
+  .common_table_key_column {
+    .cell {
+      color: @primaryTheme;
+    }
+  }
+}
+
+/deep/
+.common_dialog {
+  .el-dialog__header {
+    background-color: @dialogHeaderBg;
+    line-height: 25px;
+    padding: 16px 24px 13px;
+    color: #555555;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(230,231,235,1);
+  }
+  .el-dialog__body {
+    padding: 24px 77px 23px 40px;
+    border-bottom: 1px solid rgba(230,231,235,1);
+  }
+  .el-dialog__footer {
+    padding: 16px 24px 7px 24px;
+  }
+}
