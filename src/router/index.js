@@ -4,7 +4,7 @@
  * @Date: 2020-08-20 09:11:41
 <<<<<<< HEAD
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-08-20 19:39:42
+ * @LastEditTime: 2020-08-21 18:59:00
 =======
  * @LastEditors: smy
  * @LastEditTime: 2020-08-20 19:09:08
@@ -46,15 +46,32 @@ export const constantRoutes = [
     hidden: true
   },
 
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/home',
+  //   children: [
+  //     {
+  //       path: 'home',
+  //       name: 'home',
+  //       component: () => import('@/views/dashboard/index'),
+  //       meta: {
+  //         title: '首页',
+  //         isHome: 1,
+  //         affix: true
+  //       }
+  //     }
+  //   ]
+  // },
   {
     path: '/',
     component: Layout,
-    redirect: '/home',
+    redirect: '/zhishiku',
     children: [
       {
-        path: 'home',
-        name: 'home',
-        component: () => import('@/views/dashboard/index'),
+        path: 'zhishiku',
+        name: 'zhsihiku',
+        component: () => import('@/views/research/zhishiku'),
         meta: {
           title: '首页',
           isHome: 1,
